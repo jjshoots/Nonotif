@@ -1,0 +1,1 @@
+# Chrome Extension for disabling Facebook notifications in browser
