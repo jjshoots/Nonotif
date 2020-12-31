@@ -5,17 +5,29 @@ wipeNotifications();
 
 
 // target node to check for notifications
-const targetNode = document.getElementsByClassName("rq0escxv l9j0dhe7 du4w35lb")[0];
+const notificationNode = document.getElementsByClassName("rq0escxv l9j0dhe7 du4w35lb")[0];
+const othersNode = document.getElementsByClassName("pmk7jnqg h5g66v2i nezaghv5")[0];
 
-// Options for observer
+// Options for observers
 const config = { attributes: true, childList: true, subtree: true };
 
-// const callback function
-const callback = function(mutationsList, observer){
+// Notifications Modifier
+const notificationCallback = function(mutationsList, observer){
   renameTitle();
   wipeNotifications();
 };
 
-// observer instance
-const observer = new MutationObserver(callback);
-observer.observe(targetNode, config)
+// Notifications Modifier
+const notificationObserver = new MutationObserver(notificationCallback);
+notificationObserver.observe(notificationNode, config)
+
+
+// Others Modifier
+const othersCallback = function(mutationsList, observer){
+  wipeOthers();
+};
+
+// Others Modifier
+const othersObserver = new MutationObserver(othersCallback);
+othersObserver.observe(notificationNode, config)
+
