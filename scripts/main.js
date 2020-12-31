@@ -2,7 +2,7 @@
 
 renameTitle();
 wipeNotifications();
-
+wipeOthers();
 
 // target node to check for notifications
 const notificationNode = document.getElementsByClassName("rq0escxv l9j0dhe7 du4w35lb")[0];
