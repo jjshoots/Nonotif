@@ -2,7 +2,7 @@ function renameTitle(){
     // disable title from being renamed
     pageTitle = "Facebook";
     if (document.title != pageTitle) {
-    document.title = pageTitle;
+        document.title = pageTitle;
     };
 }
 
